@@ -666,6 +666,9 @@ class StatusBarManager: ObservableObject {
                     // 没有识别出文本，显示提醒
                     self?.showFloatingResultWindow(text: LocalizationManager.localized("no_text_detected"))
                 } else {
+                    // 将识别的文字复制到剪贴板
+                    self?.copyTextToClipboard(singleLineText)
+                    
                     // 显示弹出窗口
                     self?.showFloatingResultWindow(text: singleLineText)
                 }
@@ -693,6 +696,15 @@ class StatusBarManager: ObservableObject {
         // 执行识别
         let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
         try? handler.perform([request])
+    }
+    
+    // MARK: - Clipboard Operations
+    
+    private func copyTextToClipboard(_ text: String) {
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(text, forType: .string)
+        print("📋 已将识别文字复制到剪贴板: \(text)")
     }
     
     // MARK: - Floating Result Window

@@ -145,6 +145,9 @@ class ScreenshotService: ObservableObject {
                     // 没有识别出文本，显示提醒
                     self.showFloatingResultWindow(text: "⚠️ \(LocalizationManager.localized("no_text_detected"))")
                 } else {
+                    // 将识别的文字复制到剪贴板
+                    self.copyTextToClipboard(singleLineText)
+                    
                     // 显示弹出窗口
                     self.showFloatingResultWindow(text: singleLineText)
                 }
@@ -174,6 +177,15 @@ class ScreenshotService: ObservableObject {
         } catch {
             print("ScreenshotService: OCR识别执行失败: \(error.localizedDescription)")
         }
+    }
+    
+    // MARK: - Clipboard Operations
+    
+    private func copyTextToClipboard(_ text: String) {
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(text, forType: .string)
+        print("📋 ScreenshotService: 已将识别文字复制到剪贴板: \(text)")
     }
     
     /// 显示浮动结果窗口
