@@ -1,0 +1,30 @@
+{
+  "providers": [
+    {
+      "name": "zhipu",
+      "display_name": "智谱AI",
+      "encrypted_key": "Y2Y4MTU3MTA0N2MwNDFjYjhjYjY5ZDljN2JmY2Y0YjcuczNnZHRvVGFNWW1sUnRxag==",
+      "encryption_method": "base64",
+      "enabled": true
+    },
+    {
+      "name": "gemini",
+      "display_name": "Google Gemini 2.5 Flash",
+      "encrypted_key": "QUl6YVN5Q1llWElobWNFU0dZbVV6YzZ4cmNPcVBNOTBJbGtWbUVF",
+      "encryption_method": "base64",
+      "enabled": true
+    },
+    {
+      "name": "openai",
+      "display_name": "OpenAI GPT",
+      "encrypted_key": "c2stcGxhY2Vob2xkZXI=",
+      "encryption_method": "base64",
+      "enabled": false
+    }
+  ],
+  "security": {
+    "obfuscation_level": "high",
+    "anti_debug": true,
+    "key_rotation": false
+  }
+}

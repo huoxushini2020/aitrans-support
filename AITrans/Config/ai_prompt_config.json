@@ -1,0 +1,81 @@
+{
+  "ai_analysis": {
+    "service_provider": "智谱AI (Zhipu AI)",
+    "model": "glm-4-flash",
+    "api_url": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+    "temperature": 0.7,
+    "max_tokens": 2000,
+    "prompt_templates": {
+      "word": {
+        "zh": "请用目标语言对以下单词进行详细的词汇分析，请用Markdown格式返回分析结果：**单词:** {word}**目标语言:** {target_language}请提供以下分析内容：1. **单词发音音标**：国际音标(IPA)2. **基本释义和词性**：主要词性、基本含义、常用释义3. **词义解析**：详细含义、核心用法4. **同义词和反义词**：相关同义词、反义词、近义词5. **固定搭配**：常用搭配、短语、习惯用法6. **例句**：典型例句、用法示例**重要：请务必用目标语言回答，格式要清晰易读。**",
+        "en": "Please provide a detailed lexical analysis of the following word in the target language using Markdown format: **Word:** {word} **Target Language:** {target_language} Please include the following analysis: 1. **Pronunciation & Phonetics**: IPA transcription 2. **Basic Definition & Part of Speech**: Primary part of speech, basic meanings, common definitions 3. **Meaning Analysis**: Detailed meanings, core usage 4. **Synonyms & Antonyms**: Related synonyms, antonyms, near-synonyms 5. **Fixed Collocations**: Common collocations, phrases, idiomatic usage 6. **Example Sentences**: Typical examples, usage samples **IMPORTANT: Please respond in the target language with clear and readable formatting.**",
+        "th": "กรุณาวิเคราะห์คำศัพท์ต่อไปนี้อย่างละเอียดในภาษาที่กำหนด โดยใช้รูปแบบ Markdown: **คำ:** {word} **ภาษาที่กำหนด:** {target_language} กรุณาให้การวิเคราะห์ต่อไปนี้: 1. **การออกเสียงและสัทศาสตร์**: สัญลักษณ์ IPA 2. **ความหมายพื้นฐานและชนิดของคำ**: ชนิดของคำหลัก ความหมายพื้นฐาน คำจำกัดความทั่วไป 3. **การวิเคราะห์ความหมาย**: ความหมายโดยละเอียด การใช้งานหลัก 4. **คำพ้องและคำตรงข้าม**: คำพ้องที่เกี่ยวข้อง คำตรงข้าม คำใกล้เคียง 5. **การจัดวางคำ**: การจัดวางที่ใช้บ่อย วลี การใช้งานที่เป็นนิสัย 6. **ประโยคตัวอย่าง**: ตัวอย่างทั่วไป ตัวอย่างการใช้งาน **สำคัญ: กรุณาตอบในภาษาที่กำหนดด้วยรูปแบบที่ชัดเจนและอ่านง่าย**",
+        "ja": "指定された言語で以下の単語の詳細な語彙分析をMarkdown形式で提供してください：**単語:** {word}**対象言語:** {target_language}以下の分析内容を提供してください：1. **発音と音声学**：IPA表記2. **基本定義と品詞**：主要品詞、基本意味、一般的な定義3. **意味分析**：詳細な意味、核心的な用法4. **同義語と反義語**：関連する同義語、反義語、類義語5. **固定表現**：よく使われる組み合わせ、フレーズ、慣用表現6. **例文**：典型的な例、用法サンプル**重要：指定された言語で回答し、明確で読みやすい形式にしてください。**",
+        "ko": "지정된 언어로 다음 단어의 상세한 어휘 분석을 Markdown 형식으로 제공해 주세요: **단어:** {word}**대상 언어:** {target_language}다음 분석 내용을 제공해 주세요: 1. **발음과 음성학**: IPA 표기 2. **기본 정의와 품사**: 주요 품사, 기본 의미, 일반적인 정의 3. **의미 분석**: 상세한 의미, 핵심적인 용법 4. **동의어와 반의어**: 관련된 동의어, 반의어, 유의어 5. **고정 표현**: 자주 사용되는 조합, 구문, 관용 표현 6. **예문**: 전형적인 예시, 용법 샘플 **중요: 지정된 언어로 답변하고 명확하고 읽기 쉬운 형식으로 해 주세요.**",
+        "vi": "Vui lòng cung cấp phân tích từ vựng chi tiết của từ sau đây bằng ngôn ngữ đích theo định dạng Markdown: **Từ:** {word}**Ngôn ngữ đích:** {target_language} Vui lòng cung cấp các nội dung phân tích sau: 1. **Phát âm và ngữ âm học**: Ký hiệu IPA 2. **Định nghĩa cơ bản và từ loại**: Từ loại chính, nghĩa cơ bản, định nghĩa thông thường 3. **Phân tích nghĩa**: Nghĩa chi tiết, cách sử dụng cốt lõi 4. **Từ đồng nghĩa và trái nghĩa**: Từ đồng nghĩa liên quan, từ trái nghĩa, từ gần nghĩa 5. **Cụm từ cố định**: Các kết hợp thường dùng, cụm từ, cách dùng thành ngữ 6. **Ví dụ câu**: Các ví dụ điển hình, mẫu cách sử dụng **Quan trọng: Vui lòng trả lời bằng ngôn ngữ đích với định dạng rõ ràng và dễ đọc.**",
+        "de": "Bitte geben Sie eine detaillierte lexikalische Analyse des folgenden Wortes in der Zielsprache im Markdown-Format an: **Wort:** {word}**Zielsprache:** {target_language} Bitte geben Sie folgende Analysen an: 1. **Aussprache und Phonetik**: IPA-Transkription 2. **Grunddefinition und Wortart**: Hauptwortart, Grundbedeutungen, allgemeine Definitionen 3. **Bedeutungsanalyse**: Detaillierte Bedeutungen, Kernverwendung 4. **Synonyme und Antonyme**: Verwandte Synonyme, Antonyme, ähnliche Wörter 5. **Feste Wendungen**: Häufig verwendete Kombinationen, Phrasen, idiomatische Verwendung 6. **Beispielsätze**: Typische Beispiele, Verwendungsbeispiele **Wichtig: Bitte antworten Sie in der Zielsprache mit klarer und lesbarer Formatierung.**",
+        "fr": "Veuillez fournir une analyse lexicale détaillée du mot suivant dans la langue cible au format Markdown: **Mot:** {word}**Langue cible:** {target_language} Veuillez fournir les analyses suivantes: 1. **Prononciation et phonétique**: Transcription IPA 2. **Définition de base et classe de mot**: Classe de mot principale, significations de base, définitions courantes 3. **Analyse de la signification**: Significations détaillées, usage central 4. **Synonymes et antonymes**: Synonymes apparentés, antonymes, mots similaires 5. **Expressions figées**: Combinaisons fréquemment utilisées, phrases, usage idiomatique 6. **Exemples de phrases**: Exemples typiques, échantillons d'usage **Important: Veuillez répondre dans la langue cible avec un formatage clair et lisible.**",
+        "es": "Por favor, proporcione un análisis léxico detallado de la siguiente palabra en el idioma objetivo usando formato Markdown: **Palabra:** {word}**Idioma objetivo:** {target_language} Por favor, proporcione los siguientes análisis: 1. **Pronunciación y fonética**: Transcripción IPA 2. **Definición básica y clase de palabra**: Clase de palabra principal, significados básicos, definiciones comunes 3. **Análisis de significado**: Significados detallados, uso central 4. **Sinónimos y antónimos**: Sinónimos relacionados, antónimos, palabras similares 5. **Expresiones fijas**: Combinaciones frecuentemente usadas, frases, uso idiomático 6. **Oraciones de ejemplo**: Ejemplos típicos, muestras de uso **Importante: Por favor, responda en el idioma objetivo con formato claro y legible.**",
+        "zh-TW": "請用目標語言對以下單詞進行詳細的詞彙分析，請用Markdown格式返回分析結果：**單詞:** {word}**目標語言:** {target_language}請提供以下分析內容：1. **單詞發音符號**：國際音標(IPA)2. **基本釋義和詞性**：主要詞性、基本含義、常用釋義3. **詞義解析**：詳細含義、核心用法4. **同義詞和反義詞**：相關同義詞、反義詞、近義詞5. **固定搭配**：常用搭配、短語、習慣用法6. **例句**：典型例句、用法示例**重要：請務必用目標語言回答，格式要清晰易讀。**"
+      },
+      "sentence": {
+        "zh": "请用目标语言对以下OCR识别的句子进行详细解释和分析，请用Markdown格式返回分析结果：**原始句子:** _\"{sentence}\"_（OCR识别结果）**目标语言:** {target_language}请提供以下分析内容：1. **目标语言翻译**  - 将OCR识别的句子准确翻译成目标语言2. **句子难点解析**  - 分析句子中的语法难点、词汇难点、理解难点3. **语境分析**  - 分析句子在特定语境下的含义和用法4. **用法说明**  - 详细说明句子的语法结构、时态、语态等用法特点5. **相关表达**  - 提供相似表达和实用例句**重要：请务必用目标语言回答，格式要清晰易读。**",
+        "en": "Please provide a detailed explanation and analysis of the following OCR-recognized sentence in the target language using Markdown format: **Original Sentence:** _\"{sentence}\"_ (OCR recognition result) **Target Language:** {target_language} Please include the following analysis: 1. **Target Language Translation**  - Accurately translate the OCR-recognized sentence to the target language 2. **Sentence Difficulty Analysis**  - Analyze grammatical difficulties, vocabulary challenges, and comprehension difficulties in the sentence 3. **Contextual Analysis**  - Analyze the meaning and usage of the sentence in specific contexts 4. **Usage Explanation**  - Explain grammatical structure, tense, voice, and other usage characteristics in detail 5. **Related Expressions**  - Provide similar expressions and practical example sentences **IMPORTANT: Please respond in the target language with clear and readable formatting.**",
+        "th": "กรุณาอธิบายและวิเคราะห์ประโยคที่ได้รับการจดจำจาก OCR ต่อไปนี้อย่างละเอียดในภาษาที่กำหนด โดยใช้รูปแบบ Markdown: **ประโยคต้นฉบับ:** _\"{sentence}\"_ (ผลการจดจำจาก OCR) **ภาษาที่กำหนด:** {target_language} กรุณาให้การวิเคราะห์ต่อไปนี้: 1. **การแปลเป็นภาษาที่กำหนด**  - แปลประโยคที่ได้รับการจดจำจาก OCR อย่างถูกต้องเป็นภาษาที่กำหนด 2. **การวิเคราะห์จุดยากของประโยค**  - วิเคราะห์จุดยากทางไวยากรณ์ ความยากของคำศัพท์ จุดยากในการทำความเข้าใจ 3. **การวิเคราะห์บริบท**  - วิเคราะห์ความหมายและการใช้งานของประโยคในบริบทเฉพาะ 4. **คำอธิบายการใช้งาน**  - อธิบายโครงสร้างไวยากรณ์ กาล วาจา และลักษณะการใช้งานอื่นๆ อย่างละเอียด 5. **การแสดงออกที่เกี่ยวข้อง**  - ให้การแสดงออกที่คล้ายกันและประโยคตัวอย่างที่เป็นประโยชน์ **สำคัญ: กรุณาตอบในภาษาที่กำหนดด้วยรูปแบบที่ชัดเจนและอ่านง่าย**",
+        "ja": "指定された言語で以下のOCR認識された文の詳細な説明と分析をMarkdown形式で提供してください：**元の文:** _\"{sentence}\"_（OCR認識結果）**対象言語:** {target_language}以下の分析内容を提供してください：1. **対象言語への翻訳**  - OCR認識された文を対象言語に正確に翻訳する2. **文の難点解析**  - 文の文法の難点、語彙の難点、理解の難点を分析する3. **文脈分析**  - 特定の文脈における文の意味と用法を分析する4. **用法説明**  - 文の文法構造、時制、態などの用法特徴を詳しく説明する5. **関連表現**  - 類似表現と実用的な例文を提供する**重要：指定された言語で回答し、明確で読みやすい形式にしてください。**",
+        "ko": "지정된 언어로 다음 OCR 인식된 문장의 상세한 설명과 분석을 Markdown 형식으로 제공해 주세요: **원문:** _\"{sentence}\"_（OCR 인식 결과）**대상 언어:** {target_language}다음 분석 내용을 제공해 주세요: 1. **대상 언어 번역**  - OCR 인식된 문장을 대상 언어로 정확히 번역하기 2. **문장 난점 분석**  - 문장의 문법 난점, 어휘 난점, 이해 난점 분석하기 3. **맥락 분석**  - 특정 맥락에서 문장의 의미와 용법 분석하기 4. **용법 설명**  - 문장의 문법 구조, 시제, 태 등의 용법 특징을 자세히 설명하기 5. **관련 표현**  - 유사한 표현과 실용적인 예문 제공하기 **중요: 지정된 언어로 답변하고 명확하고 읽기 쉬운 형식으로 해 주세요.**",
+        "vi": "Vui lòng cung cấp giải thích và phân tích chi tiết câu được nhận dạng OCR sau đây bằng ngôn ngữ đích theo định dạng Markdown: **Câu gốc:** _\"{sentence}\"_（Kết quả nhận dạng OCR）**Ngôn ngữ đích:** {target_language} Vui lòng cung cấp các nội dung phân tích sau: 1. **Dịch sang ngôn ngữ đích**  - Dịch chính xác câu được nhận dạng OCR sang ngôn ngữ đích 2. **Phân tích điểm khó của câu**  - Phân tích các điểm khó về ngữ pháp, từ vựng, hiểu biết trong câu 3. **Phân tích ngữ cảnh**  - Phân tích ý nghĩa và cách sử dụng của câu trong ngữ cảnh cụ thể 4. **Giải thích cách sử dụng**  - Giải thích chi tiết cấu trúc ngữ pháp, thì, thể và các đặc điểm sử dụng khác của câu 5. **Biểu đạt liên quan**  - Cung cấp các biểu đạt tương tự và câu ví dụ thực tế **Quan trọng: Vui lòng trả lời bằng ngôn ngữ đích với định dạng rõ ràng và dễ đọc.**",
+        "de": "Bitte geben Sie eine detaillierte Erklärung und Analyse des folgenden OCR-erkannten Satzes in der Zielsprache im Markdown-Format an: **Ursprünglicher Satz:** _\"{sentence}\"_（OCR-Erkennungsergebnis）**Zielsprache:** {target_language} Bitte geben Sie folgende Analysen an: 1. **Übersetzung in die Zielsprache**  - Übersetzen Sie den OCR-erkannten Satz genau in die Zielsprache 2. **Analyse der Satzschwierigkeiten**  - Analysieren Sie grammatische Schwierigkeiten, Vokabularschwierigkeiten und Verständnisschwierigkeiten im Satz 3. **Kontextanalyse**  - Analysieren Sie die Bedeutung und Verwendung des Satzes in spezifischen Kontexten 4. **Verwendungserklärung**  - Erklären Sie die grammatische Struktur, Zeitform, Stimme und andere Verwendungsmerkmale des Satzes im Detail 5. **Verwandte Ausdrücke**  - Bieten Sie ähnliche Ausdrücke und praktische Beispielsätze **Wichtig: Bitte antworten Sie in der Zielsprache mit klarer und lesbarer Formatierung.**",
+        "fr": "Veuillez fournir une explication et une analyse détaillées de la phrase suivante reconnue par OCR dans la langue cible au format Markdown: **Phrase originale:** _\"{sentence}\"_（Résultat de reconnaissance OCR）**Langue cible:** {target_language} Veuillez fournir les analyses suivantes: 1. **Traduction dans la langue cible**  - Traduire avec précision la phrase reconnue par OCR dans la langue cible 2. **Analyse des difficultés de la phrase**  - Analyser les difficultés grammaticales, lexicales et de compréhension dans la phrase 3. **Analyse contextuelle**  - Analyser la signification et l'usage de la phrase dans des contextes spécifiques 4. **Explication de l'usage**  - Expliquer en détail la structure grammaticale, le temps, la voix et autres caractéristiques d'usage de la phrase 5. **Expressions connexes**  - Fournir des expressions similaires et des phrases d'exemple pratiques **Important: Veuillez répondre dans la langue cible avec un formatage clair et lisible.**",
+        "es": "Por favor, proporcione una explicación y análisis detallados de la siguiente oración reconocida por OCR en el idioma objetivo usando formato Markdown: **Oración original:** _\"{sentence}\"_（Resultado de reconocimiento OCR）**Idioma objetivo:** {target_language} Por favor, proporcione los siguientes análisis: 1. **Traducción al idioma objetivo**  - Traducir con precisión la oración reconocida por OCR al idioma objetivo 2. **Análisis de dificultades de la oración**  - Analizar dificultades gramaticales, de vocabulario y de comprensión en la oración 3. **Análisis contextual**  - Analizar el significado y uso de la oración en contextos específicos 4. **Explicación del uso**  - Explicar en detalle la estructura gramatical, tiempo, voz y otras características de uso de la oración 5. **Expresiones relacionadas**  - Proporcionar expresiones similares y oraciones de ejemplo prácticas **Importante: Por favor, responda en el idioma objetivo con formato claro y legible.**",
+        "zh-TW": "請用目標語言對以下OCR識別的句子進行詳細解釋和分析，請用Markdown格式返回分析結果：**原始句子:** _\"{sentence}\"_（OCR識別結果）**目標語言:** {target_language}請提供以下分析內容：1. **目標語言翻譯**  - 將OCR識別的句子準確翻譯成目標語言2. **句子難點解析**  - 分析句子中的語法難點、詞彙難點、理解難點3. **語境分析**  - 分析句子在特定語境下的含義和用法4. **用法說明**  - 詳細說明句子的語法結構、時態、語態等用法特點5. **相關表達**  - 提供相似表達和實用例句**重要：請務必用目標語言回答，格式要清晰易讀。**"
+      }
+    },
+    "analysis_sections": [
+      {
+        "title": "目标语言翻译",
+        "description": "将OCR识别的句子准确翻译成目标语言"
+      },
+      {
+        "title": "句子难点解析", 
+        "description": "分析句子中的语法难点、词汇难点、理解难点"
+      },
+      {
+        "title": "语境分析",
+        "description": "分析句子在特定语境下的含义和用法"
+      },
+      {
+        "title": "用法说明",
+        "description": "详细说明句子的语法结构、时态、语态等用法特点"
+      },
+      {
+        "title": "相关表达",
+        "description": "提供相似表达和实用例句"
+      }
+    ],
+    "output_requirements": {
+      "language": "中文",
+      "format": "Markdown",
+      "style": "清晰易读",
+      "structure": "结构化输出"
+    },
+    "language_detection": {
+      "default_language": "zh",
+      "supported_languages": ["zh", "en"],
+      "auto_detect": true
+    },
+    "prompt_selection": {
+      "word_analysis_trigger": "selected_word",
+      "sentence_analysis_trigger": "no_selection",
+      "fallback_to_sentence": true
+    },
+    "default_ai_provider": {
+      "provider_key": "zhipu_ai",
+      "provider_name": "智谱AI (Zhipu AI)",
+      "auto_save_user_choice": true
+    }
+  },
+  "version": "1.1.0",
+  "last_updated": "2024-12-09",
+  "description": "AI详细翻译提示词配置文件"
+}
