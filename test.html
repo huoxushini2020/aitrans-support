@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AITrans Support - Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .status {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #c3e6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #bee5eb;
+        }
+        .link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 10px 5px;
+            transition: transform 0.3s ease;
+        }
+        .link:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 AITrans Support Page</h1>
+        
+        <div class="status">
+            <strong>✅ GitHub Pages 测试成功！</strong><br>
+            如果您能看到这个页面，说明GitHub Pages已经正确配置。
+        </div>
+        
+        <div class="info">
+            <strong>📋 页面信息：</strong><br>
+            • 仓库：huoxushini2020/aitrans-support<br>
+            • 分支：main<br>
+            • 部署时间：<span id="deploy-time"></span>
+        </div>
+        
+        <h2>🔗 快速链接</h2>
+        <a href="index.html" class="link">查看完整支持页面</a>
+        <a href="https://github.com/huoxushini2020/aitrans-support" class="link">查看源代码</a>
+        
+        <h2>📱 App Store Connect 配置</h2>
+        <p>将此URL设置为您的Support URL：</p>
+        <code style="background: #f8f9fa; padding: 10px; border-radius: 4px; display: block; margin: 10px 0;">
+            https://huoxushini2020.github.io/aitrans-support
+        </code>
+        
+        <h2>🛠️ 下一步</h2>
+        <ol>
+            <li>确认GitHub Pages已启用（在仓库Settings > Pages中）</li>
+            <li>等待几分钟让页面完全部署</li>
+            <li>访问完整支持页面：<a href="index.html">index.html</a></li>
+            <li>在App Store Connect中设置Support URL</li>
+        </ol>
+    </div>
+    
+    <script>
+        document.getElementById('deploy-time').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
